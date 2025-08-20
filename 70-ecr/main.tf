@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "backend" {
-  name                 = "expense/backend"
+  name                 = "${var.project_name}/backend"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
@@ -8,7 +8,7 @@ resource "aws_ecr_repository" "backend" {
 }
 
 resource "aws_ecr_repository" "frontend" {
-  name                 = "expense/frontend"
+  name                 = "${var.project_name}/frontend"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
